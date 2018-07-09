@@ -1,6 +1,10 @@
 version: '3'
 services:
   tf:
+    container_name: tf
+    environment:
+      - SHELL=/bin/bash
+      - COLUMNS=150
     image: tensorflow/tensorflow:latest-gpu
     ports:
       - 8888:8888
